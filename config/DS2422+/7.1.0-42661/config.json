@@ -1,32 +1,32 @@
 {
   "os": {
-    "id": "ds2422p_42951",
-    "pat_url": "https://global.download.synology.com/download/DSM/release/7.1.1/42951/DSM_DS2422%2B_42951.pat",
-    "sha256": "ff2e444040f8105079260396649466d791fc8c6613c52ed78d993a784547476d"
+    "id": "ds2422p_42661",
+    "pat_url": "https://global.download.synology.com/download/DSM/release/7.1/42661-1/DSM_DS2422%2B_42661.pat",
+    "sha256": "c38fee0470c592b679ab52a64eac76b2a3912fb2e6aba65a65abb5aa05a98d4c"
   },
 
   "files": {
     "zlinux": {
       "name": "zImage",
-      "sha256": "d28951da0eb41286fbe37ffdfc880271787573d68226e5d26321819cf2d2e6e2"
+      "sha256": "d939b5937be00a644aae64c33633619a7c310433e60a515c77bbef00b0a7e6b6"
     },
     "ramdisk": {
       "name": "rd.gz",
-      "sha256": "a3a7571bf0220dfe53f750a554c1b570ce4a66792b0dc1c9f2d093f5d7d212b5"
+      "sha256": "bb109132e96b1e26d5e3d44557944f7518168d8cb18e35d6254c0dfe7fb19382"
     },
     "vmlinux": {
-      "sha256": "6c58b5ca781b0fbb335bf376652e24ad25a7c7edfbc1e4406569d54349d50502"
+      "sha256": "2df11d9f0b383da1eb34606770e55391f974f9cbc096127fe6a821ecd644e05a"
     }
   },
 
   "patches": {
     "zlinux": [
-	    "zImage-001-2422p-42951-ramdisk-and-flag-NOP.bsp"
+	     "zImage-001-2422p-42661-ramdisk-and-flag-NOP.bsp"
     ],
     "ramdisk": [
       "@@@COMMON@@@/ramdisk-001-disable-root-pwd.patch",
-      "@@@COMMON@@@/v7.1.1/ramdisk-002-init-script.patch",
-      "@@@COMMON@@@/v7.1.1/ramdisk-003-post-init-script-noatime.patch"
+      "@@@COMMON@@@/v7.1.0/ramdisk-002-init-script.patch",
+      "@@@COMMON@@@/v7.1.0/ramdisk-003-post-init-script.patch"
     ]
   },
 
@@ -60,7 +60,7 @@
     },
 
     "menu_entries": {
-      "RedPill DS2422+ v7.1.1-42951 (USB, Verbose)": {
+      "RedPill DS2422+ v7.1.0-42661 (USB, Verbose)": {
         "options": [
           "savedefault",
           "set root=(hd0,msdos1)",
@@ -76,7 +76,7 @@
           "log_buf_len": "32M"
         }
       },
-      "RedPill DS2422+ v7.1.1-42951 (SATA, Verbose)": {
+      "RedPill DS2422+ v7.1.0-42661 (SATA, Verbose)": {
         "options": [
           "savedefault",
           "set root=(hd0,msdos1)",

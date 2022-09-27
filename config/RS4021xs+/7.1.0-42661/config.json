@@ -103,7 +103,7 @@
                     "synoboot_satadom": 1,
                     "log_buf_len": "32M"
                 }
-            }
+           
             }	
         }
     },

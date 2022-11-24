@@ -1,8 +1,8 @@
 {
     "os": {
         "id": "dva3221_42661",
-        "pat_url": "https://global.download.synology.com/download/DSM/release/7.1/42661-1/DSM_DVA3221_42661.pat",
-        "sha256": "ed3207db40b7bac4d96411378558193b7747ebe88f0fc9c26c59c0b5c688c359"
+        "pat_url": "https://global.download.synology.com/download/DSM/release/7.1/42661/DSM_DVA3221_42661.pat",
+        "sha256": "de4c39a704f1de227b8ed8cacfe1fb3694553743b3b2f29fc31379d4a2286b2b"
     },
 
     "files": {
@@ -59,7 +59,7 @@
     	    "SataPortMap": "1", 
             "DiskIdxMap": "0",
             "mac1": "",
-            "netif_num": 1,
+            "netif_num": 4,
 
             "syno_hw_version": "DVA3221",
             "syno_hdd_powerup_seq": 0,
@@ -74,10 +74,10 @@
             "earlycon": "uart8250,io,0x3f8,115200n8"
         },
         "menu_entries": {
-            "RedPill DVA3221 v7.1.0-42661 (USB, Verbose)": {
+            "RedPill DVA3221 v7.1.0-42661 Beta (USB, Verbose)": {
                 "options": [
                     "savedefault",
-                    "set root=(hd0,msdos3)",
+                    "set root=(hd0,msdos1)",
                     "echo Loading Linux...",
                     "linux /zImage @@@CMDLINE@@@",
                     "echo Loading initramfs...",
@@ -90,10 +90,10 @@
                     "log_buf_len": "32M"
                 }
             },
-            "RedPill DVA3221 v7.1.0-42661 (SATA, Verbose)": {
+            "RedPill DVA3221 v7.1.0-42661 Beta (SATA, Verbose)": {
                 "options": [
                     "savedefault",
-                    "set root=(hd0,msdos3)",
+                    "set root=(hd0,msdos1)",
                     "echo Loading Linux...",
                     "linux /zImage @@@CMDLINE@@@",
                     "echo Loading initramfs...",
@@ -103,45 +103,10 @@
                 "cmdline": {
                     "earlyprintk": null,
                     "loglevel": 15,
-"synoboot_satadom": 3,
+                    "synoboot_satadom": 2,
                     "log_buf_len": "32M"
                 }
-            },
-	    "RedPill DVA3221 v7.1.0-42661 (USB, Verbose, Re-Install DSM)": {
-                "options": [
-                    "savedefault",
-                    "set root=(hd0,msdos3)",
-                    "echo Loading Linux...",
-                    "linux /zImage @@@CMDLINE@@@",
-                    "echo Loading initramfs...",
-                    "initrd /rd.gz /custom.gz",
-                    "echo Starting kernel with USB boot"
-                ],
-                "cmdline": {
-                    "earlyprintk": null,
-                    "loglevel": 15,
-                    "log_buf_len": "32M",
-          	    "force_junior": null
-                }
-            },
-            "RedPill DVA3221 v7.1.0-42661 (SATA, Verbose, Re-Install DSM)": {
-                "options": [
-                    "savedefault",
-                    "set root=(hd0,msdos3)",
-                    "echo Loading Linux...",
-                    "linux /zImage @@@CMDLINE@@@",
-                    "echo Loading initramfs...",
-                    "initrd /rd.gz /custom.gz",
-                    "echo Starting kernel with SATA boot"
-                ],
-                "cmdline": {
-                    "earlyprintk": null,
-                    "loglevel": 15,
-"synoboot_satadom": 3,
-                    "log_buf_len": "32M",
-          	    "force_junior": null
-                }
-            }	
+            }
         }
     },
     "extra": {
